@@ -1,0 +1,4 @@
+.root { -fx-font-family: "System"; -fx-background-color: #f7f9fc; }
+.text-field { -fx-background-radius: 8; -fx-padding: 10; }
+.button { -fx-background-color: #315c8d; -fx-text-fill: white; -fx-background-radius: 8; }
+.scroll-pane { -fx-background: transparent; -fx-background-color: transparent; }

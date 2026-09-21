@@ -31,7 +31,11 @@ public class Main extends Application {
         userInput.setOnAction(event -> handleUserInput());
         dialogContainer.heightProperty().addListener(observable -> scrollPane.setVvalue(1.0));
         stage.setTitle("Duke");
-        stage.setScene(new Scene(layout, 400, 600));
+        Scene scene = new Scene(layout, 400, 600);
+        scene.getStylesheets().add(Main.class.getResource("/view/tutorial.css").toExternalForm());
+        stage.setScene(scene);
+        stage.setMinWidth(400);
+        stage.setMinHeight(600);
         stage.show();
     }
 
