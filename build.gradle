@@ -14,7 +14,17 @@ repositories {
 }
 
 application {
-    mainClass.set("Duke")
+    mainClass.set("Launcher")
+}
+
+dependencies {
+    String javaFxVersion = '25.0.4'
+    ['win', 'mac', 'mac-aarch64', 'linux', 'linux-aarch64'].each { platform ->
+        implementation "org.openjfx:javafx-base:${javaFxVersion}:${platform}"
+        implementation "org.openjfx:javafx-controls:${javaFxVersion}:${platform}"
+        implementation "org.openjfx:javafx-fxml:${javaFxVersion}:${platform}"
+        implementation "org.openjfx:javafx-graphics:${javaFxVersion}:${platform}"
+    }
 }
 
 java {
